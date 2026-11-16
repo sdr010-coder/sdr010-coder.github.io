@@ -128,6 +128,18 @@ p { margin: 0 0 var(--s-md); color: var(--body); }
   margin-bottom: 0;
 }
 
+/* the positioning line: searchable role vocabulary without turning the
+   first screen into a job title, which the reference sites deliberately avoid */
+.role-line {
+  font-family: var(--font-sans);
+  font-size: 11.5px;
+  font-weight: 500;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin: -6px 0 var(--s-lg);
+}
+
 .thesis em {
   font-style: normal;
   color: var(--ink);
@@ -604,6 +616,61 @@ ul.roles li::before { content: "·"; color: var(--muted-soft); margin-right: 0.6
   font-size: 14px;
   color: var(--muted);
   margin: 2px 0 4px;
+}
+
+/* maturity labels — the honest distinction the HR review asked for:
+   enterprise delivery vs personal prototype vs proof of concept */
+.tag {
+  display: inline-block;
+  font-family: var(--font-sans);
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 1.1px;
+  text-transform: uppercase;
+  color: var(--muted);
+  border: 1px solid var(--hairline);
+  border-radius: 999px;
+  padding: 2px 9px;
+  margin-left: 8px;
+  vertical-align: 1px;
+  white-space: nowrap;
+}
+
+.tag.ent {
+  color: var(--primary-active);
+  border-color: color-mix(in srgb, var(--primary) 40%, var(--hairline));
+}
+
+.proj { margin: 0 0 var(--s-lg); }
+
+.proj dl {
+  display: grid;
+  grid-template-columns: 7.2rem 1fr;
+  gap: 3px var(--s-md);
+  margin: 8px 0 0;
+  font-size: 14px;
+  line-height: 1.55;
+}
+
+.proj dt {
+  font-family: var(--font-sans);
+  font-size: 10.5px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--muted);
+  padding-top: 3px;
+}
+
+.proj dd { margin: 0; color: var(--body); }
+
+.cv-note {
+  font-size: 13px;
+  line-height: 1.6;
+  color: var(--muted);
+  border-left: 2px solid var(--hairline);
+  padding-left: var(--s-md);
+  margin: var(--s-md) 0 0;
 }
 
 .cv-item ul { margin: 6px 0 0; padding-left: 18px; }
