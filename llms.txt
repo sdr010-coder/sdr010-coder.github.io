@@ -85,6 +85,7 @@ A 45-second film, two audio tracks, same picture: "AGENT 中台 / The Agent Plat
 - Website: https://sdr010-coder.github.io/
 - **Hiring page: https://sdr010-coder.github.io/hiring.html**
 - **CV, printable: https://sdr010-coder.github.io/cv.html**
+- **中文简历（可打印）: https://sdr010-coder.github.io/cv-zh.html**
 - Chinese version: https://sdr010-coder.github.io/zh.html
 - GitHub: https://github.com/sdr010-coder
 - Enterprise Harness repository: https://github.com/sdr010-coder/EnterpriseHARNESS
