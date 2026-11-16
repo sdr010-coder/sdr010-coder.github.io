@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sandor Wang — Enterprise Harness · AI transformation PMO</title>
+<meta name="description" content="Sandor Wang, Suzhou. AI transformation PMO and enterprise AI delivery. 25+ years of process transformation and PMO; designed and built a PMO platform for a global SAP S/4HANA rollout in 4.5 months; two weeks to make AI agents governable. Now building Enterprise Harness.">
+<meta name="keywords" content="AI transformation, AI transformation PMO, enterprise AI, AI adoption, agent governance, AI PMO, forward deployed engineer, enterprise AI solutions architect, digital transformation, PMO transformation, process transformation, SAP S/4HANA program management, human-in-the-loop, audit trail, 企业 AI 落地, AI 转型, 数字化转型">
+<meta name="author" content="Sandor Wang">
+<link rel="canonical" href="https://sdr010-coder.github.io/">
+<link rel="stylesheet" href="styles.css">
+<link rel="alternate" type="text/markdown" href="index.md">
+<link rel="alternate" hreflang="zh-CN" href="zh.html">
+
+<meta property="og:type" content="profile">
+<meta property="og:title" content="Sandor Wang — Enterprise Harness · AI transformation PMO">
+<meta property="og:description" content="Enterprise AI does not fail on models. It fails on the harness. 25+ years of enterprise process, now building the layer that makes agent work acceptable, not just executable.">
+<meta property="og:url" content="https://sdr010-coder.github.io/">
+<meta property="og:image" content="https://sdr010-coder.github.io/assets/harness-picture.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Sandor Wang — Enterprise Harness">
+<meta name="twitter:description" content="Enterprise AI does not fail on models. It fails on the harness.">
+
+<!-- GEO: explicit entity definition for generative engines. Every fact here also appears on the page. -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "@id": "https://sdr010-coder.github.io/#person",
+  "name": "Sandor Wang",
+  "url": "https://sdr010-coder.github.io/",
+  "image": "https://sdr010-coder.github.io/assets/harness-picture.png",
+  "jobTitle": "AI transformation PMO lead · enterprise AI delivery",
+  "description": "Twenty-five years turning enterprise process into systems across food, medical imaging, medical devices, personal care, industrial automation, lighting and robotics. Designed and built the PMO platform for a global SAP S/4HANA rollout, zero to live in 4.5 months. Now focused on Enterprise Harness: the layer that connects context, process, permissions, human gates and accountability so that agent work becomes auditable operating results instead of demos.",
+  "homeLocation": { "@type": "Place", "name": "Suzhou, China" },
+  "seeks": {
+    "@type": "Demand",
+    "name": "Forward-deployed / enterprise AI delivery role at an AI company, or AI transformation PMO leadership inside an enterprise",
+    "description": "Forward-deployed engineer, enterprise AI solutions architect, AI delivery lead, AI transformation PMO lead, head of AI adoption.",
+    "availabilityStarts": "2026-11-16",
+    "areaServed": ["CN", "APAC", "Remote"]
+  },
+  "knowsAbout": [
+    "Enterprise Harness",
+    "AI transformation",
+    "AI adoption",
+    "enterprise AI",
+    "agent governance",
+    "AI PMO",
+    "forward deployed engineering",
+    "enterprise AI solutions",
+    "Agentic Business Process Management",
+    "human-in-the-loop approval gates",
+    "audit trails and attestation",
+    "process mining and process ontology",
+    "PMO transformation",
+    "digital transformation",
+    "SAP S/4HANA programme delivery",
+    "agentic organization design",
+    "regulated industry operations",
+    "AI 转型",
+    "企业 AI 落地",
+    "智能体治理"
+  ],
+  "knowsLanguage": ["en", "zh", "ja"],
+  "alumniOf": { "@type": "CollegeOrUniversity", "name": "The Hong Kong Polytechnic University" },
+  "sameAs": [
+    "https://github.com/sdr010-coder",
+    "https://github.com/sdr010-coder/EnterpriseHARNESS"
+  ],
+  "mainEntityOfPage": "https://sdr010-coder.github.io/",
+  "subjectOf": {
+    "@type": "CreativeWork",
+    "name": "Enterprise Harness",
+    "url": "https://github.com/sdr010-coder/EnterpriseHARNESS",
+    "description": "An open definition, eleven documents and a small runnable reference implementation: a named-signer mandate, six fail-closed gates, and a dual ledger with a hash chain. Enterprise Harness = Harness + Mandate + Ledger."
+  }
+}
+</script>
+</head>
+<body>
+<div class="wrap">
+
+<h1>Sandor Wang</h1>
+
+<p class="lead">Suzhou. Twenty-five years turning enterprise process into systems. Now I build the harness that enterprise AI has to run inside.</p>
+
+<p class="thesis">I don't think enterprise AI fails on models. It fails on the <em>harness</em> — the layer that decides who may authorise an agent's work, what it is allowed to touch, and whether anyone can prove afterwards what actually happened. The model is rented. That layer is the only part a company owns.</p>
+
+<div class="framing">
+  <p class="kicker">The framing I work from</p>
+
+  <div class="formula">
+    <span class="lhs">Agent</span>
+    <span class="eq">=</span>
+    <span class="rhs">Models <span class="op">+</span> Harness</span>
+
+    <span class="lhs">Enterprise</span>
+    <span class="eq">=</span>
+    <span class="rhs group strong">Agentic BPM</span>
+
+    <span></span><span class="op">×</span>
+    <span class="rhs group">Agentic Organization</span>
+
+    <span></span><span class="op">×</span>
+    <span class="rhs group">Agent Platform</span>
+
+    <span></span><span class="op">×</span>
+    <span class="rhs group">Enterprise Harness</span>
+  </div>
+
+  <p class="note">The first line is additive: one agent is a model plus a harness. The second is <strong>multiplicative</strong> — the four dimensions are not a menu, and any one of them at zero makes the whole zero.</p>
+
+  <ul class="dims">
+    <li><b>Agentic BPM</b><span>the work — the process becomes the host, and the agent its citizen</span></li>
+    <li><b>Agentic Organization</b><span>the accountability — named roles, real decisions, who carries the consequence</span></li>
+    <li><b>Agent Platform</b><span>the capability — runtime, tools, memory, models that can be swapped</span></li>
+    <li><b>Enterprise Harness</b><span>the proof — gates that close, ledgers that reconcile, evidence a third party can check</span></li>
+  </ul>
+</div>
+
+<h2 id="film">Film</h2>
+
+<figure class="shot film">
+  <video controls preload="metadata" playsinline poster="assets/video/poster-en.jpg">
+    <source src="assets/video/agent-platform-en.mp4" type="video/mp4">
+    Your browser does not support video. <a href="assets/video/agent-platform-en.mp4">Download the film</a>.
+  </video>
+  <div class="film-meta">
+    <span>45 seconds · 1080p</span>
+    <span class="alt"><a href="zh.html#film">中文版 →</a></span>
+  </div>
+  <figcaption>Five roads — process, people, technology, data, AI — each running its own way, then joined into one. Delivery 21 → 7 days. The last line is the whole argument: <em>process automation goes to the agent; judgement stays with people.</em></figcaption>
+</figure>
+
+<p style="margin: var(--s-lg) 0 0; font-size: 15px;">
+  <strong>Open to two kinds of role:</strong> forward-deployed / enterprise AI delivery at an AI company, or AI transformation PMO leadership inside an enterprise.
+  <a href="hiring.html">What I am looking for →</a>
+</p>
+
+<h2>Building</h2>
+
+<dl class="ledger">
+
+  <dt>Now</dt>
+  <dd>
+    <span class="what"><a href="building/enterprise-harness.html">Enterprise Harness</a></span>
+    An open definition and a small runnable implementation of the two things that decide whether an agent's output can be accepted: a named-signer mandate, and a dual ledger with a hash chain.
+    <span class="nums">83 tests · Python 3.11+ · stdlib only · fail-closed by construction</span>
+  </dd>
+
+  <dt>2026</dt>
+  <dd>
+    <span class="what">Agent governance, in two weeks</span>
+    A proof of concept for governing agents across a transformation lifecycle: which agent may do what, where it must stop for a person, and what it must leave behind. Approve, stop, audit.
+    <span class="nums">475 processes · 8-step journey · 6 gates · dual ledger</span>
+  </dd>
+
+  <dt>2026</dt>
+  <dd>
+    <span class="what">Evidence-first research</span>
+    A workbench where every conclusion traces back to a source, counter-evidence is a required field rather than an afterthought, and a person signs the result.
+    <span class="nums">106 evidence items · 58 sources · human sign-off</span>
+  </dd>
+
+  <dt>2025–26</dt>
+  <dd>
+    <span class="what">A PMO platform for a global SAP S/4HANA rollout</span>
+    As PMO, I designed and built the implementation's platform — from Excel and meetings to a single system of record, zero to live in four and a half months. Portfolio, plan, RAID, resources, budget, SOW.
+    <span class="nums">4.5 months · 56 pages · 51 tables · 119,000 lines · 1,485 processes · 455 category standards</span>
+  </dd>
+
+  <dt>Earlier</dt>
+  <dd>
+    <span class="what">Transformation and systems leadership</span>
+    A US food company, a global medical-device maker, an industrial group, a robotics company, a lighting manufacturer, a poultry producer, digital imaging, personal care.
+    <span class="nums">9 companies · 7 industries · teams up to 19 · 10 APAC markets · 9-country shared-services transition</span>
+  </dd>
+
+</dl>
+
+<h2>Writing</h2>
+
+<p>Notes on the harness, written while building it. No hedging.</p>
+
+<ul class="notes">
+  <li><a href="https://github.com/sdr010-coder/EnterpriseHARNESS/blob/main/docs/01-the-problem.md">Why pilots stall</a> <span class="claim">— the gap between "the run completed" and "the company accepted the result"</span></li>
+  <li><a href="https://github.com/sdr010-coder/EnterpriseHARNESS/blob/main/docs/02-what-is-enterprise-harness.md">What an Enterprise Harness is</a> <span class="claim">— one sentence, and the line against a platform, a framework and a runtime</span></li>
+  <li><a href="https://github.com/sdr010-coder/EnterpriseHARNESS/blob/main/docs/04-mandate-and-gates.md">Mandate and the six gates</a> <span class="claim">— why an unsigned action is never permission, and why an approval must die when the thing it approved changes</span></li>
+  <li><a href="https://github.com/sdr010-coder/EnterpriseHARNESS/blob/main/docs/05-dual-ledger.md">The dual ledger</a> <span class="claim">— why "it happened" and "it can be proven" are two different claims, and why one ledger can't make both</span></li>
+  <li><a href="https://github.com/sdr010-coder/EnterpriseHARNESS/blob/main/docs/06-process-is-the-host.md">Process is the host</a> <span class="claim">— why an enterprise governs a process, and hosts an agent inside it, not the other way round</span></li>
+</ul>
+
+<h2>How I start</h2>
+
+<p>One enterprise, one value stream, ninety days. <strong>1 project · 3 digital employees · 1 human gate · 1 executive weekly report.</strong> Day 30 is a checkpoint: if a manager wouldn't read the output, we shrink the scope, change the approach, or stop.</p>
+
+<p>I publish the stop rule because a plan without one is a sales pitch. No new platform budget, no second value stream, no ROI figure I can't measure yet.</p>
+
+<h2>Before</h2>
+
+<ul class="before">
+  <li><span class="when">2024–26</span> Transformation programme manager, APAC — a US food company</li>
+  <li><span class="when">2023–24</span> Digital transformation lead, shared services — an industrial group</li>
+  <li><span class="when">2019–23</span> IT business partner — a global medical-device maker</li>
+  <li><span class="when">2009–19</span> Systems leadership in food and robotics — two plants under FDA-SSOP, GMP and HACCP; a first-in-group China SAP go-live</li>
+  <li><span class="when">2003–09</span> SAP and systems roles — digital imaging, then personal care; FICO key user to application supervisor</li>
+  <li><span class="when">Education</span> MSc Information Systems, The Hong Kong Polytechnic University</li>
+</ul>
+
+<figure class="shot">
+  <img src="assets/career.png" alt="A career timeline from 2003 to 2026 across seven industries, with the end-to-end process maps and the transformation and IT operating models behind them">
+  <figcaption>Seven industry chapters, and the three things they add up to: end-to-end process knowledge, a transformation shape — standardise, simplify, automate — and an IT operating model.</figcaption>
+</figure>
+
+<h2>Elsewhere</h2>
+
+<p class="elsewhere">
+  <a href="hiring.html">Hiring me</a><span class="sep">·</span><a href="cv.html">CV</a><span class="sep">·</span><a href="https://github.com/sdr010-coder">GitHub</a><span class="sep">·</span><a href="https://github.com/sdr010-coder/EnterpriseHARNESS/issues">Open an issue</a><span class="sep">·</span><a href="zh.html">中文</a>
+</p>
+
+<hr>
+
+<footer>
+  I'm not looking to describe this layer. I'm looking to build it inside one company and be held to the result.<br>
+  This whole site is one HTML file and one stylesheet. No framework, no analytics, no badges.
+  <div class="raw">Raw text: <a href="index.md">index.md</a> · <a href="llms.txt">llms.txt</a> · <a href="hiring.html">Hiring</a> · <a href="cv.html">CV</a></div>
+</footer>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,628 @@
+/* Sandor Wang — personal site
+   Design system: the "claude" pack from awesome-design-md
+   (D:/AICODING2/Awesome-Design-md/design-md/claude/DESIGN.md;
+    upstream https://github.com/VoltAgent/awesome-design-md).
+   Colour, type, spacing and radius tokens are taken from that pack verbatim.
+   Dark mode is composed ONLY from the pack's documented dark surfaces.
+
+   Discipline: serif display at weight 400 with negative tracking + humanist
+   sans body. Mono is reserved for data (the formula, metrics, dates).
+   Coral is scarce: the eyebrow, one accent rule, one underline. */
+
+:root {
+  /* ---- colour tokens (pack section: colors) ---- */
+  --canvas: #faf9f5;
+  --surface-soft: #f5f0e8;
+  --surface-card: #efe9de;
+  --surface-cream-strong: #e8e0d2;
+  --surface-dark: #181715;
+  --surface-dark-elevated: #252320;
+  --surface-dark-soft: #1f1e1b;
+
+  --ink: #141413;
+  --body: #3d3d3a;
+  --muted: #6c6a64;
+  --muted-soft: #8e8b82;
+  --hairline: #e6dfd8;
+  --hairline-soft: #ebe6df;
+
+  --primary: #cc785c;
+  --primary-active: #a9583e;
+  --on-primary: #ffffff;
+  --on-dark: #faf9f5;
+  --on-dark-soft: #a09d96;
+
+  /* ---- type (pack section: typography) ---- */
+  --font-display: "Tiempos Headline", "Copernicus", Garamond, "Times New Roman", serif;
+  --font-sans: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+
+  /* ---- spacing (pack section: layout) ---- */
+  --s-xxs: 4px;
+  --s-xs: 8px;
+  --s-sm: 12px;
+  --s-md: 16px;
+  --s-lg: 24px;
+  --s-xl: 32px;
+  --s-xxl: 48px;
+  --s-section: 96px;
+
+  /* ---- shapes (pack section: shapes) ---- */
+  --r-sm: 6px;
+  --r-md: 8px;
+  --r-lg: 12px;
+}
+
+/* Dark mode composed only from documented dark tokens:
+   surface-dark, surface-dark-elevated, on-dark, on-dark-soft, cream-strong. */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --canvas: #181715;
+    --surface-soft: #1f1e1b;
+    --surface-card: #252320;
+
+    --ink: #faf9f5;
+    --body: #e8e0d2;
+    --muted: #a09d96;
+    --muted-soft: #8e8b82;
+    --hairline: #252320;
+    --hairline-soft: #1f1e1b;
+  }
+}
+
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  padding: 88px 28px var(--s-section);
+  background: var(--canvas);
+  color: var(--ink);
+  font-family: var(--font-sans);
+  font-size: 16px;
+  line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+.wrap { max-width: 38rem; margin: 0 auto; }
+
+/* ---------- display type: serif, weight 400, negative tracking ---------- */
+
+h1 {
+  font-family: var(--font-display);
+  font-size: clamp(2.25rem, 6vw, 3rem);
+  font-weight: 400;
+  line-height: 1.1;
+  letter-spacing: -1px;
+  margin: 0 0 var(--s-md);
+}
+
+h2 {
+  font-family: var(--font-sans);
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 1.4;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin: var(--s-section) 0 var(--s-lg);
+}
+
+p { margin: 0 0 var(--s-md); color: var(--body); }
+
+.lead {
+  font-family: var(--font-display);
+  font-size: clamp(1.25rem, 3.2vw, 1.5rem);
+  font-weight: 400;
+  line-height: 1.35;
+  letter-spacing: -0.2px;
+  color: var(--ink);
+  margin-bottom: var(--s-lg);
+}
+
+.thesis {
+  font-size: 16px;
+  line-height: 1.62;
+  color: var(--body);
+  margin-bottom: 0;
+}
+
+.thesis em {
+  font-style: normal;
+  color: var(--ink);
+  box-shadow: inset 0 -1px 0 0 var(--primary);
+}
+
+/* Links use primary-active (#a9583e) rather than the pack's coral (#cc785c) on
+   body text: coral on cream measures about 2.9:1, which fails WCAG AA for text.
+   The documented active token measures about 4.9:1. Coral itself stays on the
+   non-text accent: the eyebrow and the accent rule. */
+a {
+  color: var(--primary-active);
+  text-decoration: none;
+  box-shadow: inset 0 -1px 0 0 color-mix(in srgb, var(--primary) 45%, transparent);
+  transition: box-shadow 120ms ease;
+}
+
+a:hover { box-shadow: inset 0 -1px 0 0 currentColor; }
+
+strong { font-weight: 600; color: var(--ink); }
+
+/* ---------- the framing panel: one dark surface on a cream page ---------- */
+
+.framing {
+  margin: var(--s-xxl) 0 var(--s-xl);
+  padding: var(--s-lg);
+  background: var(--surface-dark);
+  color: var(--on-dark);
+  border-radius: var(--r-lg);
+}
+
+.framing .kicker {
+  font-family: var(--font-sans);
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--primary);
+  margin: 0 0 var(--s-lg);
+}
+
+.formula {
+  display: grid;
+  grid-template-columns: 6.2rem 1.1rem 1fr;
+  align-items: baseline;
+  font-family: var(--font-mono);
+  font-size: 13.5px;
+  line-height: 2.1;
+}
+
+.formula .lhs { color: var(--on-dark); font-weight: 500; }
+.formula .eq,
+.formula .op { color: var(--on-dark-soft); }
+.formula .rhs { color: var(--on-dark); }
+
+.formula .group {
+  border-left: 1px solid var(--surface-dark-elevated);
+  padding-left: var(--s-sm);
+  margin-left: 2px;
+}
+
+.formula .group.strong { border-left-color: var(--primary); }
+
+.framing .note {
+  margin: var(--s-lg) 0 0;
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--on-dark-soft);
+}
+
+.framing .note strong { color: var(--on-dark); font-weight: 500; }
+
+.framing .dims {
+  margin: var(--s-lg) 0 0;
+  padding: var(--s-lg) 0 0;
+  border-top: 1px solid var(--surface-dark-elevated);
+  list-style: none;
+  display: grid;
+  gap: var(--s-sm);
+}
+
+.framing .dims li {
+  display: grid;
+  grid-template-columns: 10.5rem 1fr;
+  gap: var(--s-md);
+  font-size: 14px;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.framing .dims b {
+  font-family: var(--font-mono);
+  font-size: 11.5px;
+  font-weight: 400;
+  letter-spacing: 0.02em;
+  color: var(--on-dark);
+  padding-top: 1px;
+}
+
+.framing .dims span { color: var(--on-dark-soft); }
+
+/* In dark mode the page floor is already surface-dark, so the panel would vanish.
+   Lift it to the pack's documented elevated dark surface and derive the internal
+   hairlines from on-dark instead of introducing a new hex. */
+@media (prefers-color-scheme: dark) {
+  .framing { background: var(--surface-dark-elevated); }
+  .formula .group { border-left-color: color-mix(in srgb, var(--on-dark) 18%, transparent); }
+  .framing .dims { border-top-color: color-mix(in srgb, var(--on-dark) 18%, transparent); }
+}
+
+/* ---------- ledger ---------- */
+
+dl.ledger { margin: 0; }
+
+dl.ledger dt {
+  font-family: var(--font-sans);
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--muted);
+  padding-top: var(--s-lg);
+}
+
+dl.ledger dt:first-of-type { padding-top: 0; }
+
+dl.ledger dd {
+  margin: 6px 0 0;
+  padding-bottom: var(--s-lg);
+  border-bottom: 1px solid var(--hairline);
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--body);
+}
+
+dl.ledger dd:last-of-type { border-bottom: 0; padding-bottom: 0; }
+
+dl.ledger .what {
+  display: block;
+  font-family: var(--font-display);
+  font-size: 20px;
+  font-weight: 400;
+  letter-spacing: -0.3px;
+  line-height: 1.25;
+  color: var(--ink);
+  margin-bottom: var(--s-xs);
+}
+
+dl.ledger .what a { box-shadow: none; }
+
+dl.ledger .nums {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 12.5px;
+  line-height: 1.75;
+  color: var(--muted);
+  margin-top: var(--s-xs);
+}
+
+/* ---------- writing ---------- */
+
+ul.notes { list-style: none; margin: 0; padding: 0; }
+
+ul.notes li {
+  margin: 0 0 var(--s-md);
+  line-height: 1.55;
+  color: var(--body);
+}
+
+ul.notes li .claim { color: var(--muted); }
+
+/* ---------- before ---------- */
+
+ul.before { list-style: none; margin: 0; padding: 0; }
+
+ul.before li {
+  margin: 0 0 var(--s-sm);
+  line-height: 1.55;
+  color: var(--body);
+}
+
+ul.before .when {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: var(--muted);
+  display: inline-block;
+  min-width: 6.2em;
+  vertical-align: 1px;
+}
+
+/* ---------- contact ---------- */
+
+p.elsewhere { line-height: 2; font-size: 16px; }
+
+p.elsewhere span.sep { color: var(--muted-soft); margin: 0 0.6em; }
+
+/* ---------- figures ---------- */
+
+figure.shot { margin: var(--s-xl) 0; }
+
+figure.shot img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 1px solid var(--hairline);
+  border-radius: var(--r-lg);
+}
+
+figure.shot figcaption {
+  font-family: var(--font-sans);
+  font-size: 13px;
+  line-height: 1.55;
+  color: var(--muted);
+  margin-top: var(--s-sm);
+}
+
+figure.shot figcaption a { color: var(--muted); }
+
+/* ---------- footer ---------- */
+
+hr {
+  border: 0;
+  border-top: 1px solid var(--hairline);
+  margin: var(--s-section) 0 var(--s-md);
+}
+
+footer {
+  font-size: 14px;
+  line-height: 1.7;
+  color: var(--muted);
+}
+
+footer a { color: var(--muted); box-shadow: inset 0 -1px 0 0 var(--hairline); }
+
+footer .raw {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: var(--muted);
+  margin-top: var(--s-sm);
+}
+
+/* ---------- project page ---------- */
+
+.back {
+  font-family: var(--font-sans);
+  font-size: 14px;
+  font-weight: 500;
+  display: inline-block;
+  margin-bottom: var(--s-xxl);
+}
+
+.kicker {
+  font-family: var(--font-sans);
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--primary);
+  margin: 0 0 var(--s-sm);
+}
+
+.summary {
+  font-family: var(--font-display);
+  font-size: clamp(1.3rem, 3.4vw, 1.6rem);
+  font-weight: 400;
+  line-height: 1.35;
+  letter-spacing: -0.2px;
+  color: var(--ink);
+  margin-bottom: var(--s-lg);
+}
+
+.summary em { font-style: italic; }
+
+.fig-formula {
+  font-family: var(--font-mono);
+  font-size: 13.5px;
+  line-height: 2.1;
+  color: var(--body);
+  background: var(--surface-soft);
+  border: 1px solid var(--hairline);
+  border-radius: var(--r-md);
+  padding: var(--s-md) var(--s-lg);
+  margin: var(--s-lg) 0;
+  display: block;
+}
+
+.fig-formula strong { color: var(--ink); font-weight: 500; }
+
+.body p { color: var(--body); }
+
+.body p.dim { color: var(--muted); }
+
+/* ---------- hiring page ---------- */
+
+.track {
+  margin: 0 0 var(--s-xxl);
+  padding: var(--s-lg);
+  background: var(--surface-soft);
+  border-radius: var(--r-lg);
+}
+
+.track .who {
+  font-family: var(--font-sans);
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--primary-active);
+  margin: 0 0 var(--s-sm);
+}
+
+.track h3 {
+  font-family: var(--font-display);
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 1.25;
+  letter-spacing: -0.3px;
+  color: var(--ink);
+  margin: 0 0 var(--s-sm);
+}
+
+.track p { font-size: 15px; line-height: 1.6; margin-bottom: var(--s-sm); }
+.track p:last-child { margin-bottom: 0; }
+
+.track .role {
+  font-family: var(--font-mono);
+  font-size: 12.5px;
+  line-height: 1.7;
+  color: var(--muted);
+  margin-top: var(--s-sm);
+  margin-bottom: 0;
+}
+
+ul.roles { list-style: none; margin: 0 0 var(--s-lg); padding: 0; }
+
+ul.roles li {
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--body);
+  padding-left: 1.1em;
+  text-indent: -1.1em;
+  margin-bottom: 4px;
+}
+
+ul.roles li::before { content: "·"; color: var(--muted-soft); margin-right: 0.6em; }
+
+.no-list { list-style: none; margin: 0; padding: 0; }
+.no-list li {
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--body);
+  margin-bottom: var(--s-xs);
+  padding-left: 1.2em;
+  text-indent: -1.2em;
+}
+.no-list li::before { content: "—"; color: var(--primary); margin-right: 0.6em; }
+
+.contact-card {
+  margin: var(--s-xl) 0 0;
+  padding: var(--s-lg);
+  border: 1px solid var(--hairline);
+  border-radius: var(--r-lg);
+}
+.contact-card p { font-size: 15px; margin-bottom: var(--s-sm); }
+.contact-card p:last-child { margin-bottom: 0; }
+
+/* ---------- CV page ---------- */
+
+.cv-head { margin-bottom: var(--s-lg); }
+
+.cv-role {
+  font-family: var(--font-sans);
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  color: var(--muted);
+  margin: 0 0 var(--s-sm);
+}
+
+.cv-block { margin: 0 0 var(--s-xl); }
+
+.cv-block h2 { margin: var(--s-xl) 0 var(--s-sm); }
+
+.cv-item { margin: 0 0 var(--s-md); }
+
+.cv-item .line {
+  display: flex;
+  justify-content: space-between;
+  gap: var(--s-md);
+  align-items: baseline;
+  flex-wrap: wrap;
+}
+
+.cv-item .title {
+  font-family: var(--font-display);
+  font-size: 17px;
+  font-weight: 400;
+  letter-spacing: -0.2px;
+  color: var(--ink);
+}
+
+.cv-item .dates {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: var(--muted);
+  white-space: nowrap;
+}
+
+.cv-item .org {
+  font-size: 14px;
+  color: var(--muted);
+  margin: 2px 0 4px;
+}
+
+.cv-item ul { margin: 6px 0 0; padding-left: 18px; }
+.cv-item li { font-size: 14px; line-height: 1.55; color: var(--body); margin-bottom: 3px; }
+
+.cv-skill {
+  display: grid;
+  grid-template-columns: 9rem 1fr;
+  gap: var(--s-md);
+  font-size: 14px;
+  line-height: 1.55;
+  margin-bottom: var(--s-xs);
+}
+.cv-skill b { font-weight: 500; color: var(--ink); }
+.cv-skill span { color: var(--body); }
+
+@media print {
+  .cv-skill { grid-template-columns: 8rem 1fr; }
+}
+
+/* ---------- film ---------- */
+
+.film { margin: var(--s-xl) 0 var(--s-lg); }
+
+.film video {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: var(--r-lg);
+  border: 1px solid var(--hairline);
+  background: var(--surface-dark);
+}
+
+.film-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 14px;
+  align-items: baseline;
+  font-family: var(--font-sans);
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-top: var(--s-sm);
+}
+
+.film-meta .alt { letter-spacing: 0.5px; text-transform: none; font-weight: 400; }
+
+/* ---------- small screens ---------- */
+
+@media (max-width: 560px) {
+  body { padding: 56px 22px 64px; }
+  .formula { grid-template-columns: 4.4rem 1rem 1fr; font-size: 12.5px; }
+  .framing { padding: var(--s-md); }
+  .framing .dims li { grid-template-columns: 1fr; gap: 2px; }
+  .framing .dims b { padding-top: 4px; }
+  ul.before .when { display: block; min-width: 0; }
+  h1 { letter-spacing: -0.6px; }
+}
+
+/* ---------- print ---------- */
+
+@media print {
+  :root {
+    --canvas: #ffffff;
+    --ink: #000000;
+    --body: #222222;
+    --muted: #555555;
+    --muted-soft: #666666;
+    --hairline: #cccccc;
+    --primary: #8a3b26;
+    --primary-active: #8a3b26;
+  }
+  body { padding: 0; font-size: 10.5pt; }
+  .framing { background: #f4f1ea; color: #141413; }
+  .framing .kicker { color: #8a3b26; }
+  .framing .lhs, .framing .rhs, .framing .note strong, .framing .dims b { color: #141413; }
+  .framing .eq, .framing .op, .framing .note, .framing .dims span { color: #55524c; }
+  .formula .group { border-left-color: #d8d2c8; }
+  .formula .group.strong { border-left-color: #8a3b26; }
+  .framing .dims { border-top-color: #d8d2c8; }
+  a { color: inherit; box-shadow: none; }
+  h2 { margin-top: 36px; }
+  dl.ledger dd, figure.shot { break-inside: avoid; }
+}

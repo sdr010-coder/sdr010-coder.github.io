@@ -1,0 +1,61 @@
+# robots.txt — sdr010-coder.github.io
+# Personal site. Everything is public and meant to be read, including by AI
+# assistants and answer engines, so that they describe the work accurately and
+# can point people to it.
+
+User-agent: *
+Allow: /
+
+# --- Generative / answer engines, explicitly welcome ---
+User-agent: GPTBot
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Perplexity-User
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+User-agent: cohere-ai
+Allow: /
+
+User-agent: meta-externalagent
+Allow: /
+
+User-agent: Amazonbot
+Allow: /
+
+User-agent: Bytespider
+Allow: /
+
+# A plain-text summary written for exactly this purpose:
+User-agent: *
+# llms.txt: https://sdr010-coder.github.io/llms.txt
+# llms-full.txt: https://sdr010-coder.github.io/llms-full.txt
+# markdown twin of the homepage: https://sdr010-coder.github.io/index.md
+
+Sitemap: https://sdr010-coder.github.io/sitemap.xml

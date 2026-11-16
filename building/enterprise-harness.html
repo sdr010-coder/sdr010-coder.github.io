@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Enterprise Harness — Sandor Wang</title>
+<meta name="description" content="Enterprise Harness = Harness + Mandate + Ledger. An open definition, eleven documents and a runnable reference implementation: named signers, six fail-closed gates, and a dual ledger with a hash chain.">
+<meta name="author" content="Sandor Wang">
+<link rel="canonical" href="https://sdr010-coder.github.io/building/enterprise-harness.html">
+<link rel="stylesheet" href="../styles.css">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Enterprise Harness">
+<meta property="og:description" content="The layer that makes an agent's work acceptable to an enterprise, not just executable.">
+<meta property="og:url" content="https://sdr010-coder.github.io/building/enterprise-harness.html">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "TechArticle",
+  "headline": "Enterprise Harness",
+  "description": "Enterprise Harness is the layer that makes an agent's work acceptable to an enterprise, not just executable. Enterprise Harness = Harness + Mandate + Ledger: a named-signer mandate, fail-closed gates, and a dual ledger with a hash chain and reconciliation.",
+  "url": "https://sdr010-coder.github.io/building/enterprise-harness.html",
+  "author": { "@type": "Person", "name": "Sandor Wang", "url": "https://sdr010-coder.github.io/" },
+  "about": {
+    "@type": "Thing",
+    "name": "Enterprise Harness",
+    "description": "The accountability layer around an AI agent: mandate (who may authorise what, by name), gates (fail-closed, bound to version and parameters), and a dual ledger (business facts plus hash-chained attestations, reconciled)."
+  },
+  "isPartOf": "https://github.com/sdr010-coder/EnterpriseHARNESS"
+}
+</script>
+</head>
+<body>
+<div class="wrap">
+
+<a class="back" href="../index.html">← Sandor Wang</a>
+
+<p class="kicker">Now · open</p>
+
+<h1>Enterprise Harness</h1>
+
+<p class="summary">The layer that makes an agent's work <em>acceptable</em> to an enterprise, not just executable.</p>
+
+<div class="body">
+
+<p>The industry has settled on one formula: an agent is a model plus a harness. That harness is now a real engineering discipline — context construction, tools, memory, evaluation — and it is well covered by people better resourced than me. I work on the two terms it leaves out, because they are the two that decide whether anything reaches production:</p>
+
+<div class="fig-formula">
+  Agent = Model + Harness<br>
+  <strong>Enterprise Harness = Harness + Mandate + Ledger</strong>
+</div>
+
+<figure class="shot">
+  <img src="../assets/harness-picture.png" alt="One brain, one body: the model is the brain; tools, memory and context are the body that carries out what the brain decides">
+  <figcaption>The picture I use in a non-technical room: the model thinks. The harness is the hands, the diary and the eyes. The brain is rented; the body is yours.</figcaption>
+</figure>
+
+<p><strong>Mandate</strong> is who may say yes — by name, in what scope, for which version, and with what consequence. A gate is where that authority gets exercised, and its default is always <em>HOLD</em>: the absence of an explicit, authorised approval is never permission.</p>
+
+<p><strong>Ledger</strong> is why two books are needed rather than one. What happened, and who authorised it, must be separately provable — otherwise the system is attesting to itself, which is not evidence. The assurance ledger is hash-chained and reconciled against the business ledger, so "it ran" and "it can be proven" are two checkable claims instead of one claim by an interested party.</p>
+
+<p class="dim">The repository carries the definition, eleven short documents, and a small reference implementation — about 1,370 lines of dependency-free Python with 83 tests — so the argument is falsifiable rather than merely stated.</p>
+
+<figure class="shot">
+  <img src="../assets/agent-platform.png" alt="A platform dashboard showing a transformation portfolio: 26 agent-led business scenarios across six workstreams, each governed through one case contract">
+  <figcaption>What one case contract looks like at scale: 26 agent-led process scenarios across six workstreams, each one governed by the same authorisation and evidence structure rather than 26 bespoke approvals. From the two-week proof of concept.</figcaption>
+</figure>
+
+</div>
+
+<p style="margin-top:2rem"><a href="https://github.com/sdr010-coder/EnterpriseHARNESS">Visit the repository →</a></p>
+
+<p class="dim" style="color:var(--muted); font-size:0.95rem;">It is not a framework, not a runtime, and not a platform you buy. It is a pattern, a definition, and an executable sketch of the pattern.</p>
+
+<hr>
+
+<footer>
+  <a href="../index.html">Sandor Wang</a> · Enterprise Harness · 2026
+</footer>
+
+</div>
+</body>
+</html>

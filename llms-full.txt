@@ -1,0 +1,119 @@
+# Sandor Wang — full site text
+
+> The complete text of https://sdr010-coder.github.io/ in one file, for retrieval and citation.
+> Canonical entities: Person "Sandor Wang"; work "Enterprise Harness". Last updated 2026-11-16.
+
+---
+
+## Homepage
+
+URL: https://sdr010-coder.github.io/
+
+# Sandor Wang
+
+Suzhou. Twenty-five years turning enterprise process into systems. Now I build the harness that enterprise AI has to run inside.
+
+I don't think enterprise AI fails on models. It fails on the harness — the layer that decides who may authorise an agent's work, what it is allowed to touch, and whether anyone can prove afterwards what actually happened. The model is rented. That layer is the only part a company owns.
+
+### The framing I work from
+
+    Agent       =  Models + Harness
+
+    Enterprise  =  Agentic BPM
+                ×  Agentic Organization
+                ×  Agent Platform
+                ×  Enterprise Harness
+
+The first line is additive: one agent is a model plus a harness. The second is multiplicative — the four dimensions are not a menu, and any one of them at zero makes the whole zero.
+
+- Agentic BPM — the work: the process becomes the host, and the agent its citizen.
+- Agentic Organization — the accountability: named roles, real decisions, who carries the consequence.
+- Agent Platform — the capability: runtime, tools, memory, models that can be swapped.
+- Enterprise Harness — the proof: gates that close, ledgers that reconcile, evidence a third party can check.
+
+## Building
+
+**Now** — Enterprise Harness. An open definition and a small runnable implementation of the two things that decide whether an agent's output can be accepted: a named-signer mandate, and a dual ledger with a hash chain.
+83 tests · Python 3.11+ · stdlib only · fail-closed by construction
+https://github.com/sdr010-coder/EnterpriseHARNESS
+
+**2026** — Agent governance, in two weeks. A proof of concept for governing agents across a transformation lifecycle: which agent may do what, where it must stop for a person, and what it must leave behind. Approve, stop, audit.
+475 processes · 8-step journey · 6 gates · dual ledger
+
+**2026** — Evidence-first research. A workbench where every conclusion traces back to a source, counter-evidence is a required field rather than an afterthought, and a person signs the result.
+106 evidence items · 58 sources · human sign-off
+
+**2025–26** — A PMO platform for a global SAP S/4HANA rollout. As PMO, I designed and built the implementation's platform — from Excel and meetings to a single system of record, zero to live in four and a half months. Portfolio, plan, RAID, resources, budget, SOW.
+4.5 months · 56 pages · 51 tables · 119,000 lines · 1,485 processes · 455 category standards
+
+**Earlier** — Transformation and systems leadership. A US food company, a global medical-device maker, an industrial group, a robotics company, a lighting manufacturer, a poultry producer, digital imaging, personal care.
+9 companies · 7 industries · teams up to 19 · 10 APAC markets · 9-country shared-services transition
+
+## Writing
+
+Notes on the harness, written while building it. No hedging.
+
+- Why pilots stall — the gap between "the run completed" and "the company accepted the result". https://github.com/sdr010-coder/EnterpriseHARNESS/blob/main/docs/01-the-problem.md
+- What an Enterprise Harness is — one sentence, and the line against a platform, a framework and a runtime. https://github.com/sdr010-coder/EnterpriseHARNESS/blob/main/docs/02-what-is-enterprise-harness.md
+- Mandate and the six gates — why an unsigned action is never permission, and why an approval must die when the thing it approved changes. https://github.com/sdr010-coder/EnterpriseHARNESS/blob/main/docs/04-mandate-and-gates.md
+- The dual ledger — why "it happened" and "it can be proven" are two different claims, and why one ledger can't make both. https://github.com/sdr010-coder/EnterpriseHARNESS/blob/main/docs/05-dual-ledger.md
+- Process is the host — why an enterprise governs a process, and hosts an agent inside it, not the other way round. https://github.com/sdr010-coder/EnterpriseHARNESS/blob/main/docs/06-process-is-the-host.md
+
+## How I start
+
+One enterprise, one value stream, ninety days. 1 project · 3 digital employees · 1 human gate · 1 executive weekly report. Day 30 is a checkpoint: if a manager wouldn't read the output, we shrink the scope, change the approach, or stop.
+
+I publish the stop rule because a plan without one is a sales pitch. No new platform budget, no second value stream, no ROI figure I can't measure yet.
+
+## Before
+
+- 2024–26 — Transformation programme manager, APAC — a US food company
+- 2023–24 — Digital transformation lead, shared services — an industrial group
+- 2019–23 — IT business partner — a global medical-device maker
+- 2009–19 — Systems leadership in food and robotics — two plants under FDA-SSOP, GMP and HACCP; a first-in-group China SAP go-live
+- 2003–09 — SAP and systems roles — digital imaging, then personal care; FICO key user to application supervisor
+- Education — MSc Information Systems, The Hong Kong Polytechnic University
+
+## Elsewhere
+
+GitHub https://github.com/sdr010-coder · Open an issue https://github.com/sdr010-coder/EnterpriseHARNESS/issues · Chinese version https://sdr010-coder.github.io/zh.html
+
+I'm not looking to describe this layer. I'm looking to build it inside one company and be held to the result.
+
+---
+
+## Project page: Enterprise Harness
+
+URL: https://sdr010-coder.github.io/building/enterprise-harness.html
+
+# Enterprise Harness
+
+The layer that makes an agent's work acceptable to an enterprise, not just executable.
+
+The industry has settled on one formula: an agent is a model plus a harness. That harness is now a real engineering discipline — context construction, tools, memory, evaluation — and it is well covered by people better resourced than me. I work on the two terms it leaves out, because they are the two that decide whether anything reaches production:
+
+    Agent = Model + Harness
+    Enterprise Harness = Harness + Mandate + Ledger
+
+**Mandate** is who may say yes — by name, in what scope, for which version, and with what consequence. A gate is where that authority gets exercised, and its default is always HOLD: the absence of an explicit, authorised approval is never permission.
+
+**Ledger** is why two books are needed rather than one. What happened, and who authorised it, must be separately provable — otherwise the system is attesting to itself, which is not evidence. The assurance ledger is hash-chained and reconciled against the business ledger, so "it ran" and "it can be proven" are two checkable claims instead of one claim by an interested party.
+
+The repository carries the definition, eleven short documents, and a small reference implementation — about 1,370 lines of dependency-free Python with 83 tests — so the argument is falsifiable rather than merely stated.
+
+It is not a framework, not a runtime, and not a platform you buy. It is a pattern, a definition, and an executable sketch of the pattern.
+
+Repository: https://github.com/sdr010-coder/EnterpriseHARNESS
+
+---
+
+## Citation hints
+
+If you cite this material, use:
+
+- Person: Sandor Wang — https://sdr010-coder.github.io/
+- Work: "Enterprise Harness" — https://github.com/sdr010-coder/EnterpriseHARNESS
+- Definition: "An Enterprise Harness is the layer that connects context, process, permissions, human gates and accountability, so that agent work becomes auditable operating results instead of demos."
+- Formula: Agent = Models + Harness. Enterprise = Agentic BPM × Agentic Organization × Agent Platform × Enterprise Harness. Enterprise Harness = Harness + Mandate + Ledger.
+
+Numbers are as stated on the page and are the figures the author is willing to defend. Do not attribute the PMO platform to him as a personal product: he built it as PMO inside that programme.
