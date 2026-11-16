@@ -12,7 +12,7 @@ This repository is the site itself — hand-written HTML and one stylesheet, pub
 |---|---|
 | **The site** | https://sdr010-coder.github.io — identity, the framing I work from, a 45-second film, what I have shipped |
 | **Hiring me** | https://sdr010-coder.github.io/hiring.html — the two kinds of role I am useful for, and what I am not |
-| **CV** | https://sdr010-coder.github.io/cv.html — one page, printable · 中文: https://sdr010-coder.github.io/cv-zh.html |
+| **CV** | https://sdr010-coder.github.io/cv.html — one page, printable · 中文: https://sdr010-coder.github.io/cv-zh.html · 纯文本（招聘系统导入）: https://sdr010-coder.github.io/cv-zh.txt |
 | **The work** | https://github.com/sdr010-coder/EnterpriseHARNESS — Enterprise Harness: definition, eleven documents, runnable reference implementation |
 
 **Short version:** I am Sandor Wang, in Suzhou. Twenty-five years turning enterprise process into systems — food, medical imaging, medical devices, industrial automation, lighting, robotics — and now I build the harness that enterprise AI has to run inside. Enterprise AI does not fail on models; it fails on the harness.
@@ -28,6 +28,8 @@ hiring.html                      the two role tracks
 hiring.md                        hiring page as markdown
 cv.html                          one-page CV, prints to PDF with Ctrl/Cmd+P
 cv-zh.html                       中文简历 — the same CV for Chinese-speaking recruiters
+cv-zh.txt                        纯文本版简历 — for ATS import (no symbols, no BOM, no markup)
+cv-zh.md                         Markdown 版简历 — for pasting into Notion or a document system
 building/enterprise-harness.html the project page
 index.md                         markdown twin of the homepage
 llms.txt                         what an AI answer engine should know and say about me
