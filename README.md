@@ -12,7 +12,6 @@ This repository is the site itself — hand-written HTML and one stylesheet, pub
 |---|---|
 | **The site** | https://sdr010-coder.github.io — identity, the framing I work from, a 45-second film, what I have shipped |
 | **Hiring me** | https://sdr010-coder.github.io/hiring.html — the two kinds of role I am useful for, and what I am not |
-| **中文** | https://sdr010-coder.github.io/hiring-zh.html — the same, in Chinese |
 | **CV** | https://sdr010-coder.github.io/cv.html — one page, printable |
 | **The work** | https://github.com/sdr010-coder/EnterpriseHARNESS — Enterprise Harness: definition, eleven documents, runnable reference implementation |
 
@@ -25,7 +24,7 @@ This repository is the site itself — hand-written HTML and one stylesheet, pub
 ```
 index.html                       the site (English)
 zh.html                          the site (Chinese)
-hiring.html / hiring-zh.html     the two role tracks, EN and 中文
+hiring.html                      the two role tracks
 hiring.md                        hiring page as markdown
 cv.html                          one-page CV, prints to PDF with Ctrl/Cmd+P
 building/enterprise-harness.html the project page

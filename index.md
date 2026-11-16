@@ -35,7 +35,6 @@ A 45-second film, English and Chinese tracks: five roads — process, people, te
 Two kinds of role: forward-deployed / enterprise AI delivery at an AI company, or AI transformation PMO leadership inside an enterprise.
 
 - Hiring page: https://sdr010-coder.github.io/hiring.html
-- 中文: https://sdr010-coder.github.io/hiring-zh.html
 - CV, printable: https://sdr010-coder.github.io/cv.html
 
 ## Building
