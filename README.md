@@ -29,6 +29,7 @@ hiring.md                        hiring page as markdown
 cv.html                          one-page CV, prints to PDF with Ctrl/Cmd+P
 cv-zh.html                       中文简历 — the same CV for Chinese-speaking recruiters
 cv-zh.txt                        纯文本版简历 — for ATS import (no symbols, no BOM, no markup)
+cv-en.txt                        English CV, plain text and pure ASCII — for ATS import
 cv-zh.md                         Markdown 版简历 — for pasting into Notion or a document system
 building/enterprise-harness.html the project page
 index.md                         markdown twin of the homepage

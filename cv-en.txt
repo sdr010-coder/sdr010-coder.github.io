@@ -1,0 +1,237 @@
+Sandor Wang
+Enterprise AI Transformation and Business Process Leader
+
+Website: https://sdr010-coder.github.io
+GitHub: https://github.com/sdr010-coder
+English CV: https://sdr010-coder.github.io/cv.html
+Chinese CV: https://sdr010-coder.github.io/cv-zh.html
+
+Current location: Suzhou, China
+Working locations: Shanghai, Suzhou
+Relocation: Hangzhou, Beijing
+Target roles: Enterprise AI Transformation Director / Head of AI Transformation /
+Business Process Transformation Lead / Transformation PMO Lead
+Level: management roles first; senior programme lead or transformation advisor also considered
+Industries: manufacturing, medical devices, medical imaging, food, industrial automation,
+lighting, robotics
+
+
+============================================================
+EXECUTIVE PROFILE
+============================================================
+
+Twenty-five years inside multinational operations, covering food manufacturing, medical
+devices, medical imaging, personal care, industrial automation, lighting and robotics, running
+ERP programmes, regional IT and the PMO. My work sits where People, Process, Systems and Data
+meet, and for the last two years I have extended that base into Enterprise AI: agent platforms,
+agentic process models and human approval mechanisms, and how those become an operating
+capability rather than a demonstration.
+
+My differentiator is not AI engineering. It is knowing what a real enterprise process,
+organisation and system landscape look like, and therefore which AI ideas can be delivered,
+in what order, with which controls.
+
+
+============================================================
+CORE COMPETENCIES
+============================================================
+
+Enterprise AI: AI transformation strategy and sequencing, agent platform design, Agentic
+Business Process Management, human-in-the-loop approval gates, evidence and audit trails,
+model independence
+
+Transformation: PMO design and operation, portfolio and stage-gate governance, value-stream and
+process redesign, operating-model change, GBS and shared-services transition
+
+ERP and systems: SAP ECC and S/4HANA programme delivery, global template design and
+localisation, SAP Basis and systems governance, master data and data governance
+
+Delivery control: WBS, SOW, RACI, RAID and escalation, resource and budget management, SI and
+vendor management, regulated environments (FDA-SSOP, GMP, HACCP)
+
+Building: AI-assisted development of internal platforms end to end; Python; specification,
+acceptance and governance of agent systems
+
+
+============================================================
+SELECTED PROJECTS
+============================================================
+
+1. PMO Platform for a Global SAP S/4HANA Rollout
+Maturity: Enterprise delivery
+Period: 2025 - 2026
+Role: PMO, inside the programme
+
+Problem: A multi-country, multi-workstream SAP implementation was governed through spreadsheets
+and meetings, with no single source of truth for plan, risk, resources, budget or deliverables.
+Constraint: A commercial PPM suite was already in place, but it did not carry this programme's
+category dictionary, WBS/SOW chain or escalation logic, and could not be changed at the speed
+the programme needed.
+My role: Programme PMO. I owned the process model, definitions, data design, trade-offs and
+acceptance. Built with AI-assisted development; the code stays with the programme.
+Mechanisms designed: Programme - Workstream - SOW - WBS - Deliverable - RAID - Escalation -
+tracker data chain; a 455-item category dictionary (L1 6, L2 61, L3 388) as the shared
+vocabulary.
+Adoption: Used by the global programme PMO and as the vehicle for APAC process-owner readiness
+training across ten countries. The platform aligned PMO practice before rollout rather than only
+reporting on it; the category dictionary and data model carried the global template design and
+the localisation practice.
+Verification: 56 business pages, 51 data tables, 119,000 lines of code, 1,485 processes and
+4,759 process facts, 4 programmes, 53 WBS items, 24 deliverables, 13 RAID entries (4 escalated),
+48 SOW lines, 44 resources, 25 workshops; zero to live in 4.5 months.
+
+2. Enterprise Agent Platform - Agent Governance
+Maturity: Proof of concept
+Period: 2026
+Role: Personal project; designer and builder
+
+Problem: Enterprises can give an agent capability long before they can answer three questions:
+who is authorised to approve it, what it may touch, and how anyone proves afterwards what it
+did.
+Constraint: Workflow engines and AI copilots assume either that a person is present at every
+step, or that nothing requires approval. Neither survives contact with a regulated process.
+My role: Designed the process model, the governance model and the working prototype.
+Mechanisms designed: Named-signer mandate with delegation and separation of duties; six
+fail-closed gates bound to artifact version and parameter digest; a dual ledger (business facts
+plus hash-chained attestations) with reconciliation; approve, stop and audit as first-class
+operations.
+Maturity detail: Proof of concept, built in two weeks; zero scenarios released to production.
+At capture this was the build phase, not the release phase, and that distinction is the reason
+the design exists.
+Validation: Discussed and tested with APAC process owners and IT business partners, then
+presented to the regional IT VP and the global AI and Data VP as a prototype of AI
+transformation.
+Verification: 475 processes, 8-step delivery journey, 6 gates, dual ledger; 26 business
+scenarios, 6 agent workstreams, 191 EPM processes, 2,073 BPMN agent cells, 103 human roles.
+
+3. Agentic Business Process Management - End-to-End Process Redesign
+Maturity: Proof of concept
+Period: 2026
+Role: Personal project
+
+Problem: AI adoption stalls at the task level because an enterprise governs processes, not
+prompts; the unit that needs redesign is the end-to-end process, with agents inside it.
+My role: Redesigned five end-to-end process families as agent-hosted flows: Source-to-Settle,
+Plan-to-Make, Make-to-Stock, Order-to-Cash and Finance.
+Mechanisms designed: Agent-to-process attachment points, human approval points, agent registry
+and activation, knowledge and governance modules, so that an agent is an accountable process
+participant rather than a plugin.
+Maturity detail: Proof of concept; prototype interfaces only.
+Verification: 26 scenarios, 6 workstreams and 103 human roles modelled.
+
+4. Enterprise Harness - Open Definition and Reference Implementation
+Maturity: Personal prototype, published and open
+Period: 2026
+Role: Author of the definition, the eleven documents and the reference implementation
+
+Problem: The industry defines what an agent is, but rarely defines what makes its work
+acceptable to an enterprise; that layer had no name and no reference implementation.
+Mechanisms designed: Agent = Model + Harness, extended to Enterprise Harness = Harness +
+Mandate + Ledger; the six-gate ladder; the dual ledger and its reconciliation.
+Maturity detail: Published and open. 83 tests, Python 3.11+, no dependencies, so the
+specification is falsifiable rather than merely described.
+Verification: https://github.com/sdr010-coder/EnterpriseHARNESS
+
+5. Evidence-First AI Research Platform
+Maturity: Personal prototype
+Period: 2026
+Role: Personal project
+
+Every conclusion traces to a source, counter-evidence is a required field, and a person signs
+the result. 106 evidence items from 58 sources; evidence grading, permission boundaries, audit
+and versioning.
+
+Other prototypes, deliberately not detailed above to keep the positioning focused: a
+university-level AI creation platform built for an art department's school-level research
+project in Shanghai; evidence-first investment research prototypes co-developed with two
+investment principals at leading domestic firms; and a demo derived from the PMO platform,
+adapted for a listed biopharma company.
+
+
+============================================================
+PROFESSIONAL EXPERIENCE
+============================================================
+
+2024 - 2026
+Transformation Programme Manager, APAC
+A US food company
+Global SAP S/4HANA template and APAC localisation, covering ten countries across plants and
+offices.
+
+2023 - 2024
+Digital Transformation Lead, Shared Services
+An industrial group
+E-invoice platform PMO covering 88 legal entities.
+
+2019 - 2023
+IT Business Partner
+A global medical-device maker
+Shared-services growth, data platforms, citizen development, and a nine-country shared-services
+transition.
+
+2009 - 2019
+Systems Leadership
+A global poultry and food manufacturer, then a robotics company
+ERP rollout and plant compliance systems; teams up to 19; the first China SAP go-live in the
+group (2008).
+
+2003 - 2009
+SAP and Systems Roles
+Digital imaging, then personal care
+SAP FICO key user to SAP application supervisor; China SAP project manager.
+
+
+============================================================
+EDUCATION
+============================================================
+
+2013 - 2015
+The Hong Kong Polytechnic University
+MSc Information Systems
+
+
+============================================================
+CERTIFICATIONS AND TRAINING
+============================================================
+
+SAP MM / PP / WM / FI / CO certified training (Japan, 2004 - 2005)
+Six Sigma Leadership (2009)
+Lean Manufacturing (2008)
+SAP Meat Industry Solution (2009)
+MCDBA and MCSE (2000)
+Yonyou ERP-U8 (2001)
+
+
+============================================================
+LANGUAGES
+============================================================
+
+Chinese: native
+English: professional working proficiency
+Japanese: basic
+
+
+============================================================
+KEYWORDS
+============================================================
+
+Enterprise AI transformation, AI transformation leader, AI adoption, agent governance, agent
+platform, Agentic Business Process Management, agentic enterprise, human-in-the-loop,
+AI governance, digital transformation, business process transformation, process redesign,
+process optimisation, operating model change, organisational change, PMO, programme management,
+project portfolio management, stage-gate governance, ERP, SAP ECC, SAP S/4HANA, global template,
+localisation, master data management, data governance, budget management, vendor management,
+cross-functional collaboration, team leadership, regulated industry, FDA-SSOP, GMP, HACCP,
+forward deployed, enterprise delivery
+
+
+============================================================
+NOTE
+============================================================
+
+This is the public version of the CV. It uses industry descriptions instead of employer names
+and does not name the programmes or internal systems involved. A conventional CV with employer
+names, month-level dates, programme names and references is available on request.
+
+Contact: through the website https://sdr010-coder.github.io or GitHub
+https://github.com/sdr010-coder
