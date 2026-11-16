@@ -76,7 +76,7 @@ I publish the stop rule because a plan without one is a sales pitch. No new plat
 
 ## Elsewhere
 
-Email: sandorwang010@gmail.com
+Email: Sandor.wang@qq.com
 GitHub https://github.com/sdr010-coder · Open an issue https://github.com/sdr010-coder/EnterpriseHARNESS/issues · Chinese version https://sdr010-coder.github.io/zh.html
 
 I'm not looking to describe this layer. I'm looking to build it inside one company and be held to the result.
