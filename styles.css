@@ -336,6 +336,70 @@ figure.shot img {
   border-radius: var(--r-lg);
 }
 
+/* Click to enlarge. Pure CSS: the thumbnail links to a full-screen :target
+   overlay holding the same image, so there is no JavaScript on the site and
+   the big version is already in the browser cache. */
+
+a.zoom {
+  display: block;
+  cursor: zoom-in;
+  box-shadow: none;
+  border-radius: var(--r-lg);
+}
+
+a.zoom img { transition: opacity 140ms ease; }
+a.zoom:hover img { opacity: 0.92; }
+
+a.zoom::after {
+  content: "点击放大 · click to enlarge";
+  display: block;
+  font-family: var(--font-sans);
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  color: var(--muted-soft);
+  margin-top: 6px;
+}
+
+.lightbox { display: none; }
+
+.lightbox:target {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  inset: 0;
+  z-index: 200;
+  padding: 20px;
+  background: rgba(20, 20, 19, 0.94);
+  box-shadow: none;
+  text-decoration: none;
+  cursor: zoom-out;
+  backdrop-filter: blur(3px);
+}
+
+.lightbox img {
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+  border-radius: var(--r-md);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+}
+
+.lightbox .hint {
+  position: fixed;
+  top: 18px;
+  right: 24px;
+  font-family: var(--font-sans);
+  font-size: 11px;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  color: #faf9f5;
+  opacity: 0.75;
+}
+
 figure.shot figcaption {
   font-family: var(--font-sans);
   font-size: 13px;
@@ -623,6 +687,8 @@ ul.roles li::before { content: "·"; color: var(--muted-soft); margin-right: 0.6
   .formula .group.strong { border-left-color: #8a3b26; }
   .framing .dims { border-top-color: #d8d2c8; }
   a { color: inherit; box-shadow: none; }
+  a.zoom::after { content: ""; }
+  .lightbox { display: none !important; }
   h2 { margin-top: 36px; }
   dl.ledger dd, figure.shot { break-inside: avoid; }
 }
