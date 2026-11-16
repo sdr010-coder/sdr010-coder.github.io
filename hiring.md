@@ -55,4 +55,4 @@ https://github.com/sdr010-coder/EnterpriseHARNESS/issues
 
 I reply to every message from a named person at a named company, usually within two working days. Vague recruiter blasts get ignored; that is deliberate.
 
-Based in Suzhou. Open to roles in China, across APAC, and remote. 中文欢迎.
+**Based in Suzhou.** Working locations: Shanghai and Suzhou. Relocation open to Hangzhou and Beijing. 中文母语。
