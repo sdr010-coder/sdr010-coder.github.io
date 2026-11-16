@@ -89,7 +89,7 @@ A 45-second film, two audio tracks, same picture: "AGENT 中台 / The Agent Plat
 - Chinese version: https://sdr010-coder.github.io/zh.html
 - GitHub: https://github.com/sdr010-coder
 - Email: Sandor.wang@qq.com
-- LinkedIn: https://www.linkedin.com/in/sandor-wang-75169444b/
+- LinkedIn: https://www.linkedin.com/in/sandor-wang/
 - Enterprise Harness repository: https://github.com/sdr010-coder/EnterpriseHARNESS
 - Issues (a reliable way to reach him): https://github.com/sdr010-coder/EnterpriseHARNESS/issues
 
